@@ -11,17 +11,9 @@ using namespace std;
 //find the kth samllest Element
 void kthSmallestElement(int arr[], int size, int k){
 
-    priority_queue <int> maxHeap;
-    
-    for(int i = 0; i < size; i++){
-        maxHeap.push(arr[i]);
-        
-        if(maxHeap.size() > k){
-            maxHeap.pop();
-        }
+        sort(arr,arr+size);
+        cout<< "Kth smallest element in the array is: "<< arr[k-1];
     }
-    cout<< "Kth smallest element in the array is: "<< maxHeap.top();
-}
 
 int main()
 {
